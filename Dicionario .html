@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Dicionário de Dados Conceitual - Oficina Mecânica</title>
+<style>
+body{font-family:Arial,sans-serif;margin:40px;line-height:1.45;color:#222}
+h1{margin-bottom:4px} .meta{margin-bottom:24px;color:#555}
+table{border-collapse:collapse;width:100%} th,td{border:1px solid #999;padding:8px;vertical-align:top}
+th{background:#eee} caption{text-align:left;font-weight:bold;margin-bottom:8px}
+</style></head><body>
+<h1>Dicionário de Dados Conceitual (Preliminar)</h1>
+<div class="meta"><strong>Organização:</strong> Scopino Auto Club<br>
+<strong>Projeto:</strong> Modelo Conceitual (DER) — Oficina Mecânica</div>
+<p>Principais atributos, finalidade e regra de negócio associada, conforme o documento da entrega.</p>
+<table><thead><tr><th>Entidade</th><th>Atributo</th><th>Descrição</th><th>Regra associada</th><th>Observação</th></tr></thead>
+<tbody><tr><td>CLIENTE</td><td>id_cliente</td><td>Identificador único do cliente.</td><td>RN01</td><td>Obrigatório</td></tr>
+<tr><td>CLIENTE</td><td>nome</td><td>Nome do cliente.</td><td>—</td><td>Obrigatório</td></tr>
+<tr><td>CLIENTE</td><td>telefone</td><td>Telefone para contato.</td><td>—</td><td>Obrigatório para atendimento</td></tr>
+<tr><td>CLIENTE</td><td>email</td><td>E-mail do cliente.</td><td>—</td><td>Opcional</td></tr>
+<tr><td>VEICULO</td><td>id_veiculo</td><td>Identificador único do veículo.</td><td>RN02</td><td>Obrigatório</td></tr>
+<tr><td>VEICULO</td><td>id_cliente</td><td>Cliente proprietário.</td><td>RN02</td><td>Obrigatório</td></tr>
+<tr><td>VEICULO</td><td>placa</td><td>Identificação da placa do veículo.</td><td>RN02</td><td>Obrigatório e único</td></tr>
+<tr><td>VEICULO</td><td>marca/modelo/ano</td><td>Dados de identificação do veículo.</td><td>RN02</td><td>Obrigatórios</td></tr>
+<tr><td>ORDEM_SERVICO</td><td>id_os</td><td>Identificador da ordem.</td><td>RN03</td><td>Obrigatório</td></tr>
+<tr><td>ORDEM_SERVICO</td><td>id_veiculo</td><td>Veículo atendido.</td><td>RN03/RN05</td><td>Obrigatório</td></tr>
+<tr><td>ORDEM_SERVICO</td><td>data_entrada</td><td>Data de entrada do veículo.</td><td>—</td><td>Obrigatório</td></tr>
+<tr><td>ORDEM_SERVICO</td><td>status</td><td>Situação da ordem.</td><td>—</td><td>Aberta, em execução, concluída/cancelada</td></tr>
+<tr><td>ORDEM_SERVICO</td><td>valor_total</td><td>Valor final da ordem.</td><td>RN09</td><td>Calculado a partir de serviços e peças</td></tr>
+<tr><td>MECANICO</td><td>id_mecanico</td><td>Identificador do profissional.</td><td>—</td><td>Obrigatório e único</td></tr>
+<tr><td>MECANICO</td><td>nome</td><td>Nome do mecânico.</td><td>—</td><td>Obrigatório</td></tr>
+<tr><td>SERVICO</td><td>id_servico</td><td>Identificador do serviço.</td><td>—</td><td>Obrigatório e único</td></tr>
+<tr><td>SERVICO</td><td>descricao</td><td>Nome/descrição do serviço.</td><td>—</td><td>Obrigatório</td></tr>
+<tr><td>SERVICO</td><td>preco_base</td><td>Preço de referência.</td><td>—</td><td>Maior ou igual a zero</td></tr>
+<tr><td>OS_SERVICO</td><td>id_os / id_servico</td><td>Chaves da relação entre OS e serviço.</td><td>RN07</td><td>Obrigatórias</td></tr>
+<tr><td>OS_SERVICO</td><td>quantidade</td><td>Quantidade executada.</td><td>—</td><td>Maior que zero</td></tr>
+<tr><td>OS_SERVICO</td><td>valor</td><td>Valor praticado na OS.</td><td>—</td><td>Maior ou igual a zero</td></tr></tbody></table>
+</body></html>

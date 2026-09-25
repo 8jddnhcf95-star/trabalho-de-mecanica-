@@ -7,8 +7,8 @@ Este repositório reúne os materiais da Entrega 1 de Modelagem Conceitual (DER)
 ### Integrantes
 - Ryan Nunes
 - Matheus Bosnic
-- RGM: ____________________
-- RGM: ____________________
+- RGM: 47646454____________________
+- RGM: 47391171____________________
 
 ### Arquivos
 - `Trabalho faculdade - revisado.docx` — documento principal da entrega.

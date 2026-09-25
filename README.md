@@ -23,6 +23,3 @@ Relacionamentos principais:
 - Veículo → Ordem de Serviço: 1:N
 - Mecânico → Ordem de Serviço: 1:N
 - Ordem de Serviço ↔ Serviço: N:N, resolvido por OS_Serviço.
-
-### Observação
-Os dados de processos e regras internas que não aparecem nas fontes públicas foram tratados no trabalho como proposta de modelagem e devem ser confirmados por pesquisa de campo/entrevista.
